@@ -36,7 +36,7 @@
               <a class="nav-link js-scroll-trigger" href="#about">About</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#services">Services</a>
+              <a class="nav-link js-scroll-trigger" href="#search">Search</a>
             </li>
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#portfolio">Portfolio</a>
@@ -85,54 +85,62 @@
             <a class="btn btn-light btn-xl js-scroll-trigger" href="#services">Get Started!</a>
             -->
             <hr class="light my-4">
-            <h3 class="section-heading text-white"> <%= result %> </h3> 
+            <h3 id="recognition_result" class="section-heading text-white"> <%= result %> </h3> 
           </div>
         </div>
       </div>
     </section>
-    <section id="services">
+    <section id="search">
       <div class="container">
         <div class="row">
           <div class="col-lg-12 text-center">
-            <h2 class="section-heading">At Your Service</h2>
+            <h2 class="section-heading"> Search Result</h2>
+            <hr class="my-4">
+          </div>
+        </div>
+        <div class="row">
+        <gcse:search> <%= result %> </gcse:search>
+          <script>
+          (function() {
+            var cx = '008717638860159009482:d-9pkeoqui8';
+            var gcse = document.createElement('script');
+            gcse.type = 'text/javascript';
+            gcse.async = true;
+            gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(gcse, s);
+            window.onload = function(){
+            document.getElementById('gsc-i-id1').value = document.getElementById('recognition_result').innerHTML };
+          })();
+          </script>
+        </div>
+      </div>
+      <div class="row">
+          <div class="col-lg-12 text-center">
+            <h2 class="section-heading"> Calculation </h2>
+            <hr class="my-4">
+            <p> N/A </p>
+
+          </div>
+        </div>
+      </div>
+      
+      <div class="row">
+          <div class="col-lg-12 text-center">
+            <h2 class="section-heading"> Maze </h2>
             <hr class="my-4">
           </div>
         </div>
       </div>
       <div class="container">
         <div class="row">
-          <div class="col-lg-3 col-md-6 text-center">
-            <div class="service-box mt-5 mx-auto">
-              <i class="fa fa-4x fa-diamond text-primary mb-3 sr-icons"></i>
-              <h3 class="mb-3">Sturdy Templates</h3>
-              <p class="text-muted mb-0">Our templates are updated regularly so they don't break.</p>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-6 text-center">
-            <div class="service-box mt-5 mx-auto">
-              <i class="fa fa-4x fa-paper-plane text-primary mb-3 sr-icons"></i>
-              <h3 class="mb-3">Ready to Ship</h3>
-              <p class="text-muted mb-0">You can use this theme as is, or you can make changes!</p>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-6 text-center">
-            <div class="service-box mt-5 mx-auto">
-              <i class="fa fa-4x fa-newspaper-o text-primary mb-3 sr-icons"></i>
-              <h3 class="mb-3">Up to Date</h3>
-              <p class="text-muted mb-0">We update dependencies to keep things fresh.</p>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-6 text-center">
-            <div class="service-box mt-5 mx-auto">
-              <i class="fa fa-4x fa-heart text-primary mb-3
-                sr-icons"></i>
-              <h3 class="mb-3">Made with Love</h3>
-              <p class="text-muted
-              mb-0">You have to make
-              your websites with love
-              these days!</p>
-            </div>
-          </div>
+          <canvas style="margin:auto" id="myCanvas" width="360" height="360">
+            <table>
+              <tr> <td>asfd</td></tr>
+              <tr> <td>asdf</td></tr>
+            </table>
+          </canvas>
+          <script src="js/game.js"></script>
         </div>
       </div>  
     </section>
@@ -247,11 +255,59 @@
           </div>
         </div>
       </div>
+    </section>
+    <section id="services">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <h2 class="section-heading"> Services </h2>
+            <hr class="my-4">
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-3 col-md-6 text-center">
+            <div class="service-box mt-5 mx-auto">
+              <i class="fa fa-4x fa-diamond text-primary mb-3 sr-icons"></i>
+              <h3 class="mb-3">Sturdy Templates</h3>
+              <p class="text-muted mb-0">Our templates are updated regularly so they don't break.</p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 text-center">
+            <div class="service-box mt-5 mx-auto">
+              <i class="fa fa-4x fa-paper-plane text-primary mb-3 sr-icons"></i>
+              <h3 class="mb-3">Ready to Ship</h3>
+              <p class="text-muted mb-0">You can use this theme as is, or you can make changes!</p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 text-center">
+            <div class="service-box mt-5 mx-auto">
+              <i class="fa fa-4x fa-newspaper-o text-primary mb-3 sr-icons"></i>
+              <h3 class="mb-3">Up to Date</h3>
+              <p class="text-muted mb-0">We update dependencies to keep things fresh.</p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 text-center">
+            <div class="service-box mt-5 mx-auto">
+              <i class="fa fa-4x fa-heart text-primary mb-3
+                sr-icons"></i>
+              <h3 class="mb-3">Made with Love</h3>
+              <p class="text-muted
+              mb-0">You have to make
+              your websites with love
+              these days!</p>
+            </div>
+          </div>
+        </div>
+      </div>  
+    </section>
     
+
       <section class="bg-dark text-white">
       <div class="container text-center">
         <h2 class="mb-4"> Open source project!</h2>
-        <a class="btn btn-light btn-xl sr-button" href="http://startbootstrap.com/template-overviews/  creative/">Download Now!</a>
+        <a class="btn btn-light btn-xl sr-button" href="http://github.com/ghjeong12/pblock/">Download Now!</a>
       </div>
     </section>
     
@@ -291,5 +347,6 @@
                                        
     <!-- Custom scripts for this template -->
     <script src="js/creative.min.js"></script>
+    <script src="js/game.js"></script>
   </body>
 </html>

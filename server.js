@@ -8,13 +8,16 @@ app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
 app.engine('html', require('ejs').renderFile);
 
+var favicon = require('serve-favicon');
 
+app.use(favicon((__dirname + '/assets/img/favicon.png')));
 var server = app.listen(3000, function(){
    console.log("Express server has started on port 3000")
 });
 
 app.use(express.static('public'));
 app.use(express.static(__dirname + '/assets'));
+
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded());

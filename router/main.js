@@ -1,5 +1,45 @@
 module.exports = function(app, fs)
 {
+  app.get('/imgs', function(req, res){
+      fs.readFile('./assets/img/rabbit_64.png', function (error, data) {
+          res.writeHead(200, { 'Content-Type':'text/html' });
+          res.end(data);
+        });
+    });
+  app.get('/imgs/rabbit', function(req, res){
+      fs.readFile('./assets/img/rabbit.png', function (error, data) {
+          res.writeHead(200, { 'Content-Type':'text/html' });
+          res.end(data);
+        });
+    });
+  app.get('/imgs/animal-track', function(req, res){
+      fs.readFile('./assets/img/animal-track.png', function (error, data) {
+          res.writeHead(200, { 'Content-Type':'text/html' });
+          res.end(data);
+        });
+    });
+  app.get('/imgs/trees', function(req, res){
+      fs.readFile('./assets/img/trees.png', function (error, data) {
+          res.writeHead(200, { 'Content-Type':'text/html' });
+          res.end(data);
+        });
+    });
+  app.get('/imgs/lion', function(req, res){
+      fs.readFile('./assets/img/lion.png', function (error, data) {
+          res.writeHead(200, { 'Content-Type':'text/html' });
+          res.end(data);
+        });
+    });
+  app.get('/imgs/waterfall', function(req, res){
+      fs.readFile('./assets/img/waterfall.png', function (error, data) {
+          res.writeHead(200, { 'Content-Type':'text/html' });
+          res.end(data);
+        });
+    });
+
+
+
+
   app.get('/',function(req,res){
     res.render('index', {
     length: 5,
