@@ -112,6 +112,11 @@ var downPressed=false;
 document.addEventListener("keypress", keyPressHandler);
 document.addEventListener("keydown", keyDownHandler, false);
 document.addEventListener("keyup", keyUpHandler, false);
+function sleepFor( sleepDuration ){
+           var now = new Date().getTime();
+               while(new Date().getTime() < now + sleepDuration){ /* do nothing */ }
+}
+
 function keyPressHandler(e) {
   console.log("hey");
 }
@@ -185,7 +190,6 @@ lion_img.onload=function()
 {
   drawImageCell(lion_img, 6, 6);
 }
-
 
 
 var canvas = document.getElementById("myCanvas");
