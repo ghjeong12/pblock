@@ -310,3 +310,8 @@ header.masthead p {
 .btn-primary:active, .btn-primary:focus {
   box-shadow: 0 0 0 0.2rem rgba(240, 95, 64, 0.5) !important;
 }
+
+.maze-cell
+{
+  background-color:white; display:table-cell;border:1px solid; width: 50px; height:      50px;
+}
