@@ -60,72 +60,46 @@
               <strong>Programmable Blocks</strong>
             </h1>
             <hr>
+            <!-- PBLOCK Drawing -->
             <div id="lineDrawing"> <svg viewBox="0 0 340 100">
-                      
                 <g fill="none" fill-rule="evenodd" stroke="currentColor" stroke-width="1" class="lines">
+                <!-- P -->
                 <path d="M10 95V20H25V95H10" stroke-dasharray="150" style="stroke-dashoffset: 150px;"></path>
                 <path d="M10,20 H40 C70 20 70 65 40 65 H10V50H40 C50 50 50 35 40 35 H10V20" stroke-dasharray="150" style="stroke-dashoffset: 150px;"></path>
-                <!-- 143 448 
-                <path d="M10 80V20H20Q30 35 20 50H10" stroke-dasharray="316.85528564453125" style="stroke-dashoffset: 316.855px;"></path>
-                -->
-                <!--<path d="M58 80V50.12C57.7 41.6 51.14 35 43 35a15 15 0 0 0 0 30h7.5v15H43a30 30 0 1 1 0-60c16.42 0 29.5 13.23 30 29.89V80H58z" stroke-dasharray="316.85528564453125" style="stroke-dashoffset: 316.855px;"></path>
-                -->
                 <!-- B -->
                 <path d="M65 95V20H80V95H65" stroke-dasharray="150" style="stroke-dashoffset: 150px;"></path>
                 <path d="M65,20 H95 C125 20 125 65 95 65 H65V50H95 C105 50 105 35 95 35 H65V20" stroke-dasharray="150" style="stroke-dashoffset: 150px;"></path>
                 <path d="M65,50 H95 C125 50 125 95 95 95 H65V80H95 C105 80 105 65 95 65 H65V50" stroke-dasharray="150" style="stroke-dashoffset: 150px;"></path>
-                <!--
-                <path d="M58 80V49.77C58.5 33.23 71.58 20 88 20 a30 30 0 0 1 30 30 v30 h-15 V50 a15 15 0 0 0-15-15 c-8.14 0-14.7 6.6-15 15.12V80H58zm75 0 V20 h-15 v60 h15z" stroke-dasharray="441.1739501953125" style="stroke-dashoffset: 441.174px;"></path>
-                -->
-                
                 <!-- L -->
                 <path d="M120 95V20H135V95H120" stroke-dasharray="150" style="stroke-dashoffset: 150px;"></path>
                 <path d="M120 95V80H175V95H120" stroke-dasharray="150" style="stroke-dashoffset: 150px;"></path>
-                
                 <!-- O -->
                 <path d="M175 47.5 V67.5 C175 105 230 105 230 67.5 V47.5 C230 15 175 15 175 47.5" stroke-dasharray="150" style="stroke-dashoffset: 150px;"></path>
                 <path d="M190 47.5 V67.5 C190 85 215 85 215 67.5 V47.5 C215 35 190 35 190 47.5" stroke-dasharray="150" style="stroke-dashoffset: 150px;"></path>
-                
                 <!-- C -->
                 <path d="M285 20 H250 C225 20 225 95 250 95 H285 V80 H255 C245 80 245 35 255 35 H285V20" stroke-dasharray="150" style="stroke-dashoffset: 150px;"></path>
-                
                 <!-- K -->
                 <path d="M285 95V20H300V95H285" stroke-dasharray="150" style="stroke-dashoffset: 150px;"></path>
                 <path d="M340 20H325 Q305 41.25 285 57.5 V72.5 Q315 46.25 340 20" stroke-dasharray="150" style="stroke-dashoffset: 150px;"></path>
                 <path d="M285 42.5 Q312.5 68.75 340 95 H325 Q305 76.25 285 57.5" stroke-dasharray="150" style="stroke-dashoffset: 150px;"></path>
-                <!--
-                <path d="M118 80V49.77C118.5 33.23 131.58 20 148 20a30 30 0 0 1 30 30v30h-15V50a15 15 0 0 0-15-15c-8.14 0-14.7 6.6-15 15.12V80h-15zm-7.5-60a7.5 7.5 0 1 1-7.48 8v-1c.25-3.9 3.5-7 7.48-7z" stroke-dasharray="338.3053894042969" style="stroke-dashoffset: 338.305px;"></path>
-                -->
-                <!--
-                <path d="M133 65a15 15 0 0 1-15-15v-7.5h-15V50a30 30 0 0 0 30 30V65zm30 15V49.77C163.5 33.23 176.58 20 193 20a30 30 0 0 1 30 30v30h-15V50a15 15 0 0 0-15-15c-8.14 0-14.7 6.6-15 15.12V80h-15z" stroke-dasharray="406.8699035644531" style="stroke-dashoffset: 406.87px;"></path>
-                -->
-                <!--
-                <path d="M238 65a15 15 0 0 1 0-30c8.1 0 14.63 6.53 15 15h-15v15h30V49.89C267.5 33.23 254.42 20 238 20a30 30 0 0 0 0 60V65z" stroke-dasharray="301.8561706542969" style="stroke-dashoffset: 301.856px;"></path>
-                -->
-                <!--
-                <path d="M260.48 65a7.5 7.5 0 1 1-7.48 8v-1c.26-3.9 3.5-7 7.48-7z" stroke-dasharray="47.128875732421875" style="stroke-dashoffset: 47.1289px;"></path>
-                -->
-                <!--
-                <path d="M270 80V20H285v60H270" stroke-dasharray="150" style="stroke-dashoffset: 150px;"></path>
-                -->
                 </g>
               </svg> 
             </div>
             <script>
             var lineDrawing = anime({
-                targets: '#lineDrawing .lines path',
-                  strokeDashoffset: [anime.setDashoffset, 0],
-                    easing: 'easeInOutSine',
-                      duration: 1500,
-                        delay: function(el, i) { return i * 250 },
-                          direction: 'alternate',
-                            loop: true
+              targets: '#lineDrawing .lines path',
+              strokeDashoffset: [anime.setDashoffset, 0],
+              easing: 'easeInOutSine',
+              duration: 1500,
+              delay: function(el, i) { return i * 250 },
+              direction: 'alternate',
+              loop: true
             });
             </script>
           </div>
           <div class="col-lg-8 mx-auto">
             <p class="text-faded mb-5">
-            You can simply do programming with blocks. Just make fun with blocks and take a picture and upload!</p>
+            You can simply do programming with blocks.<br> Just have fun with blocks and take a picture and upload!</p>
             <a class="btn btn-primary btn-xl js-scroll-trigger" href="#about">Find Out
               More</a>
           </div>
@@ -147,6 +121,8 @@
               <input type='hidden' id='level' name='level' value=<%=maze_level%> />
               <input href="#about" class="btn btn-light" type='submit' />
             </form>
+            <hr class="light my-4">
+            <a class="btn btn-light" href="/capture">Capture </a>
             <!--
             <a class="btn btn-light btn-xl js-scroll-trigger" href="#services">Get Started!</a>
             -->
@@ -248,7 +224,11 @@
               <div id="finished" style="margin-top:20; display:none;" class="alert alert-success">
                 <strong>통과!</strong> Next 버튼을 눌러 다음 레벨로 넘어가세요.
               </div>
- 
+
+               <div id="no_instruction" style="margin-top:20; display:none;" class="alert alert-danger">
+                  <strong>에러!</strong> 인스트럭션이 입력되지 않았습니다.
+              </div>
+
               <div id="not_finished" style="margin-top:20; display:none;" class="alert alert-danger">
                   <strong>에러!</strong> 현재 레벨을 먼저 통과하세요.
               </div>
@@ -401,7 +381,14 @@
                   var ins = document.getElementById('hint-'+i).innerHTML;
                   instructions.push(ins.toUpperCase());
                 }
+                // PLAY BUTTON FUNCTION
                 document.getElementById('playButton').onclick = function(e){
+                  if(num_lines==0)
+                  {
+                    document.getElementById('no_instruction').style.display='block';
+                    return ;
+                  }
+                  document.getElementById('no_instruction').style.display='none';
                   var basicTimeline = anime.timeline();
                   for(var i = 0; i < num_lines; i++)
                   {  
@@ -426,15 +413,10 @@
                     //    finishedLogEl.value = 'Promise resolved';
                     document.getElementById('finished').style.display='block';
                     document.getElementById('not_finished').style.display='none';
-                          // Rebind the promise, since this demo can be looped.
-                    /*      
-                    setTimeout(function() {
-                                promise = finishedPromise.finished.then(logFinished);
-                                  });
-                    */
                     }
                   }
                 };
+                // NEXT BUTTON FUNCTION
                 document.getElementById('nextButton').onclick = function(e){
                   if(finished == 1)
                   {
@@ -553,15 +535,15 @@
           </div>
           
           <div class="col-lg-4 col-sm-6">
-            <a class="portfolio-box" href="img/portfolio/fullsize/4.jpg">
-              <img class="img-fluid" src="img/portfolio/thumbnails/4.jpg" alt="">
+            <a class="portfolio-box" href="img/portfolio/fullsize/kids.png">
+              <img class="img-fluid" src="img/portfolio/thumbnails/kids.png" alt="">
               <div class="portfolio-box-caption">
                 <div class="portfolio-box-caption-content">
                   <div class="project-category text-faded">
-                    Category
+                    Kids
                   </div>
                   <div class="project-name">
-                    Project Name
+                    Alphabet blocks
                   </div>
                 </div>
               </div>
