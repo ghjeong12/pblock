@@ -29,3 +29,17 @@ app.use(session({
 
 
 var router = require('./router/main')(app, fs);
+
+var io = require('socket.io')(server);
+io.on('connection', function (socket) {
+    socket.emit('news', { hello: 'world' });
+    socket.on('imageTransfer', function (data) {
+      console.log("image is transffered!");
+      socket.broadcast.emit('processPic');
+  });
+    socket.on('buttonClicked', function (data) {
+      console.log("Button clicked!");
+      socket.broadcast.emit('processingPic');
+  });
+
+});
