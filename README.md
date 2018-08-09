@@ -1,3 +1,4 @@
-#Google Cloud Vision API with Node.js
+# pblock
+PBlock. This is a web program to assist kids building computational thinking having fun with REAL blocks (eg. magnetic blocks).
 
-This is a example of using the Cloud Vision API with Node.js
+## Getting started
